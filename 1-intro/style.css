@@ -1,0 +1,45 @@
+/******* ANIMATION INTRO *******/
+
+.outer {
+  background-color: blueviolet;
+  width: 500px;
+  height: 500px;
+  margin: 0 auto;
+}
+
+.inner {
+  background-color: cadetblue;
+  width: 50%;
+  height: 50%;
+  transition: transform 1s ease-in-out, backround-color 1s;
+  /* transition: transform 1s cubic-bezier(0.68, -0.55, 0.265, 1.55); */
+}
+
+.outer:hover .inner {
+  /* transform: translateX(100%);
+  background-color: chartreuse; */
+  /* animation: travel 2s ease-in-out; */
+  /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+  /* animation-iteration-count: 3; */
+  /* animation-direction: alternate; */
+  /* animation-fill-mode: backwards; */
+  /* animation-delay: 1s; */
+  animation: travel 2s ease-in-out 1s alternate forwards;
+
+  //? hepsini tek satırda yazabiliriz
+}
+
+@keyframes travel {
+  0% {
+    transform: translateX(0);
+  }
+  33% {
+    transform: translateY(100%);
+  }
+  66% {
+    transform: translate(100%, 100%);
+  }
+  100% {
+    transform: translate(100%, 0);
+  }
+}
